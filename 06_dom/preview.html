@@ -1,0 +1,32 @@
+<textarea id="editor" rows="6" placeholder="Type here..."></textarea>
+<div id="preview" style="white-space:pre-wrap;border:1px solid #ddd;padding:8px;"></div>
+<script>
+    const editor = document.getElementById('editor');
+    const preview = document.getElementById('preview');
+    editor.addEventListener('input', () => {
+        preview.textContent = editor.value;
+    });
+</script>
+
+<!-- <ul id="todo">
+  <li><button class="done">Done</button> Task A</li>
+  <li><button class="done">Done</button> Task B</li>
+  <li><button class="done">Done</button> Task C</li>
+</ul>
+<script>
+document.getElementById('todo').addEventListener('click', (e) => {
+  if (e.target.matches('button.done')) {
+    const li = e.target.closest('li');
+    li.classList.toggle('completed');
+  }
+});
+</script> -->
+
+<!-- function debounce(fn, wait = 200) {
+  let t;
+  return (...args) => {
+    clearTimeout(t);
+    t = setTimeout(() => fn.apply(this, args), wait);
+  };
+}
+// Usage: search.addEventListener('input', debounce(handler, 150)); -->

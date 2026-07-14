@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #212121; color:#fff; height: 100vh; display: flex; justify-content: center; align-items: center; font-size: 3rem;">
+    <div id="clock">--:--:--</div>
+
+    <script>
+        const clock = document.getElementById('clock');
+        function tick() {
+            const now = new Date();
+            const hh = String(now.getHours()).padStart(2, '0');
+            const mm = String(now.getMinutes()).padStart(2, '0');
+            const ss = String(now.getSeconds()).padStart(2, '0');
+            clock.textContent = `${hh}:${mm}:${ss}`;
+        }
+        tick();
+        setInterval(tick, 1000);
+    </script>
+</body>
+
+</html>
