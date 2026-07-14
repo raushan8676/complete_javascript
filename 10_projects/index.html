@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7ff, #e8ecff);
+            color: #222;
+        }
+
+        nav {
+            padding: 20px;
+            background: linear-gradient(90deg, #4f46e5, #7c3aed);
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 10px 16px;
+            border-radius: 8px;
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            padding: 0 20px;
+        }
+
+        .project {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .project h2 {
+            text-align: center;
+            color: #4338ca;
+            font-size: 1.2rem;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+    </nav>
+
+    <div class="container">
+        <a href="project1/index.html">
+            <div class="project">
+                <h2>Digital Clock</h2>
+            </div>
+        </a>
+        <a href="#">
+            <div class="project">
+                <h2>Todo List</h2>
+            </div>
+        </a>
+        <a href="#">
+            <div class="project">
+                <h2>Calculator</h2>
+            </div>
+        </a>
+        <a href="#">
+            <div class="project">
+                <h2>Weather App</h2>
+            </div>
+        </a>
+        <a href="#">
+            <div class="project">
+                <h2>Quiz App</h2>
+            </div>
+        </a>
+    </div>
+</body>
+</html>
