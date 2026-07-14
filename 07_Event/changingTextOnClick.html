@@ -1,0 +1,33 @@
+<!-- <p id="text">Hello</p>
+<button id="changeBtn">Change Text</button>
+
+<script>
+const text = document.getElementById("text");
+const changeBtn = document.getElementById("changeBtn");
+
+changeBtn.addEventListener("click", function () {
+  text.textContent = "Text changed!";
+});
+</script> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>login IN</p>
+    <button id="btn">Logout</button>
+
+    <script>
+        const p = document.querySelector('p');
+        const btn = document.querySelector('#btn');
+
+        btn.addEventListener('click', function(){
+            p.textContent = "Log Out"
+        })
+    </script>
+</body>
+</html>

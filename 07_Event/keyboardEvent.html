@@ -1,0 +1,24 @@
+<!-- <button id="myBtn">Click</button>
+
+<script>
+const myBtn = document.getElementById("myBtn");
+
+myBtn.addEventListener("click", function (event) {
+  console.log(event.type);        // click
+  console.log(event.target);      // button element
+});
+</script> -->
+
+
+
+<input id="name" placeholder="Type your name">
+<p id="show"></p>
+
+<script>
+const nameInput = document.getElementById("name");
+const show = document.getElementById("show");
+
+nameInput.addEventListener("input", function (event) {
+  show.textContent = "You typed: " + event.target.value;
+});
+</script>
