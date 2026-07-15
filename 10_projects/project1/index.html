@@ -15,6 +15,7 @@
             font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #f5f7ff, #e8ecff);
             color: #222;
+            transition: background-color 0.3s ease;
         }
 
         nav {
@@ -35,15 +36,39 @@
             background: rgba(255, 255, 255, 0.2);
         }
 
-        .content {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 24px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+        h1{
             text-align: center;
+            margin: 20px 0;
         }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+        }
+
+        span{
+            display: inline-flex;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        span#grey{
+            background-color: grey;
+        }
+        span#white{
+            background-color: white;
+            border: 1px solid #ccc;
+        }
+        span#blue{
+            background-color: blue;
+        }
+        span#yellow{
+            background-color: yellow;
+        }
+
     </style>
 </head>
 <body>
@@ -51,9 +76,24 @@
         <a href="../index.html">Back to Projects</a>
     </nav>
 
-    <div class="content">
-        <h1>Project 1: Digital Clock</h1>
-        <p>This page can hold your project content.</p>
-    </div>
+     <h1>Color Scheme Switcher</h1>
+      <div class="button-container">
+          <span class="button" id="grey"></span>
+          <span class="button" id="white"></span>
+          <span class="button" id="blue"></span>
+          <span class="button" id="yellow"></span>
+      </div>
+
+      <script>
+        const body = document.querySelector('body');
+        const buttons = document.querySelectorAll('.button');
+
+        buttons.forEach(button =>{
+            button.addEventListener('click', () => {
+                const color = button.id;
+                body.style.background = color;
+            });
+        })
+      </script>
 </body>
 </html>
